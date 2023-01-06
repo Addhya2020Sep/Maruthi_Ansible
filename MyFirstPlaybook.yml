@@ -6,15 +6,18 @@
     apt:
       name: git
       state: present
+    when: ansible_os_family =="Debian"
 
   - name: I want to install wget on ubuntu
     apt:
       name: wget
       state: present
+    when: ansible_os_family =="Debian"  
 
   - name: I want to install wget on redhat
     yum:
       name: wget
       state: present
-      
+    when: ansible_os_family =="RedHat"   
+
 
