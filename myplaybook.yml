@@ -1,0 +1,21 @@
+---
+- hosts: Webservers
+  become: yes
+  tasks:
+  - name: ubuntu
+    apt:
+      name: "{{mypackubuntu}}"
+      state: present
+    when: ansible_os_family =="Debian"
+
+  - name: RedHat
+    yum:
+      name: "{{mypackredhat}}"
+      state: present
+    when: ansible_os_family =="RedHat"
+
+  - name: RedHat
+    service:
+       name: "{{mypackredhat}}"
+       state: started
+    when: ansible_os_family =="RedHat"    
