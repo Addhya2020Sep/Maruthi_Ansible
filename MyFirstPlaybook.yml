@@ -22,7 +22,7 @@
 
   - name: I want to install apache2 webserver on redhat
     yum:
-      name: apache2
+      name: httpd
       state: present
     when: ansible_os_family ="Redhat"   
 
