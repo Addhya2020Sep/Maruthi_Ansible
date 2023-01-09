@@ -37,6 +37,12 @@
     apt:
       name: "{{Myubuntuapacheserver}}"
       state: present
-    when: ansible_os_family =="Debian"    
+    when: ansible_os_family =="Debian"   
+
+  - name: I want to install Java on ubuntu
+    apt:
+      name: "{{InstallMyJava}}"
+      state: present
+    when: ansible_os_family =="Debian""     
 
 
