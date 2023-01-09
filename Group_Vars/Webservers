@@ -1,6 +1,5 @@
 ---
 
-
 mypackubuntu: apache2
 mypackredhat: httpd
 myjavaubuntu: openjdk-8-jre
