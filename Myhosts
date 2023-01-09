@@ -8,3 +8,7 @@
 
 [Dbservers]
 172.9.23.12
+
+[Webservers:vars]
+Myubuntuapacheserver=apache2
+Myredhatapacheserver=httpd

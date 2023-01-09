@@ -22,14 +22,21 @@
 
   - name: I want to install apache2 webserver on redhat
     yum:
-      name: httpd
+      name: {{"Myredhatapacheserver"}}
       state: present
     when: ansible_os_family =="RedHat"   
 
   - name: I want to start the webserver
     service:
-      name: httpd
+      name: {{"Myredhatapacheserver"}}
       state: started
-    when: ansible_os_family =="RedHat"    
+    when: ansible_os_family =="RedHat"  
+
+
+  - name: I want to install apache2 server on ubuntu
+    apt:
+      name: {{"Myubuntuapacheserver"}}
+      state: present
+    when: ansible_os_family =="Debian"    
 
 
