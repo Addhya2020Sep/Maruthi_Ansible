@@ -1,5 +1,5 @@
 ---
 
-Myubuntupack: apache2
-Myredhatpack: httpd
-InstallMyJava: openjdk-8-jre
+mypackubuntu: apache2
+mypackredhat: httpd
+myjavaubuntu: openjdk-8-jre
