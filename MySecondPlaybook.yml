@@ -1,28 +1,10 @@
 ---
-- hosts: Webservers
+- hosts: 172.31.42.166
   become: yes
   tasks:
-  - name: I want to Install server on redhat
-    yum:
-      name: "{{mypackredhat}}"
-      state:
-    when: ansible_os_family =="RedHat"
-
-  - name: I want start server
-    service:
-       name: "{{mypackredhat}}"
-       state: started
-    when: ansible_os_family =="RedHat"
-
-  - name: I want to install java on ubuntu
-    apt:
-      name: "{{myjavaubuntu}}"
-      state: present
-    when: ansible_os_family =="Debian"
-
   - name: I want to install server on ubuntu
     apt: 
-      name: "{{mypackubuntu}}"
+      name: "{{mypack}}"
       state: present  
     when: ansible_os_family =="Debian"  
 
